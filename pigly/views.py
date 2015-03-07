@@ -20,3 +20,8 @@ def _getAnalytics():
 	return Response(json.dumps(val),mimetype='application/json')
 
 
+def _transactions(transaction_list):
+	print "FLASK"
+	print transaction_list
+
+
