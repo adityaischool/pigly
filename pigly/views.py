@@ -173,3 +173,8 @@ def writeRideData():
 	#travelManager.InsertDriverData(driverData)
 	return jsonify({"status": "received"})
 
+def _transactions(transaction_list):
+	print "FLASK"
+	print transaction_list
+
+
