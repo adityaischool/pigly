@@ -18,7 +18,6 @@ jQuery(document).ready(function($) {
 
 $("#get_transactions").click(function()
 {
-	current_item = event.target;
 	var xhr = new XMLHttpRequest();
 	xhr.open("POST", "https://api.levelmoney.com/api/v2/hackathon/get-all-transactions", true);
 	xhr.setRequestHeader('Content-Type', 'application/json');

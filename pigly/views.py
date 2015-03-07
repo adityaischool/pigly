@@ -5,6 +5,10 @@ from flask import url_for
 from pigly import app
 import urllib2
 
+@app.route('/', methods=['GET', 'POST'])
+def land():
+	return render_template("login.html")
+
 
 
 #AJAX - analytics dashboard 
