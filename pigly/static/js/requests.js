@@ -18,7 +18,6 @@ jQuery(document).ready(function($) {
 	    var parsed = JSON.parse(this.response);
 	    var pretty = JSON.stringify(parsed, null, 2);
 	    document.getElementById('login_caption').textContent = "WELCOME!";
-	    console.log("LOGIN SUCCESS");
 	};
 	xhr.onerror = function(err) {
 	    document.getElementById('login_caption').textContent = "ugh an error. i can't handle this right now.";
@@ -65,6 +64,130 @@ $("#login_next").click(function()
 	args = {"args": {"uid":  1110568334, "token":  "209E16DD45691753346973B767432F93", "api-token":  "HackathonApiToken"}};
 	xhr.send(JSON.stringify(args));
 	$('#fin_overview').show();
+});
+
+//****************** AGE ***********************//
+$("#get_age").click(function()
+{
+	$('#login').hide();
+	$("#age").show();
+	$('.demo-btn').hover(function() {
+          $(this).addClass("animated pulse");
+        }, function() {
+          $(this).removeClass("animated pulse");
+        });
+      
+        $('.demo-btn').click(function() {
+          if ($(this).find(".goal-img").hasClass("add-btn-checked") || $(this).hasClass("custom-btn")){
+            $(this).removeClass("btn-checked");
+            $(this).find(".goal-img").removeClass("add-btn-checked")
+          } else {
+            $(this).addClass("btn-checked");
+            $(this).find(".goal-img").addClass("add-btn-checked");
+          }
+        });
+      
+        $('.cc-loan-btn').click(function(){
+          console.log("loan or cc btn clicked");
+          $(".cc-loan-btn").addClass("demo-btn-checked");
+        });
+      
+        $('.custom-btn').click(function(){
+          console.log("custom button");
+          $(".goals-questions").removeClass("show").addClass("hide");
+          $(".custom-goal").addClass("animated fadeInRight show");
+        });
+      
+        $('.goal-back').click(function(){
+          console.log("goal back button click");
+          $(".goals-questions").addClass("animated fadeInLeft show");
+          $(".custom-goal").removeClass("show").addClass("hide");
+        });
+});
+
+//****************** GENDER ***********************//
+$("#age_next").click(function()
+{
+	$("#age").hide();
+	$('#gender').show();
+
+    $('.gender-icon').hover(function() {
+      $('.gender-icon').innerHTML("eh");
+    });
+  
+  
+    $('.demo-btn').hover(function() {
+      $(this).addClass("animated pulse");
+    }, function() {
+      $(this).removeClass("animated pulse");
+    });
+  
+    $('.demo-btn').click(function() {
+      if ($(this).find(".goal-img").hasClass("add-btn-checked") || $(this).hasClass("custom-btn")){
+        $(this).removeClass("btn-checked");
+        $(this).find(".goal-img").removeClass("add-btn-checked")
+      } else {
+        $(this).addClass("btn-checked");
+        $(this).find(".goal-img").addClass("add-btn-checked");
+      }
+    });
+  
+    $('.cc-loan-btn').click(function(){
+      console.log("loan or cc btn clicked");
+      $(".cc-loan-btn").addClass("demo-btn-checked");
+    });
+  
+    $('.custom-btn').click(function(){
+      console.log("custom button");
+      $(".goals-questions").removeClass("show").addClass("hide");
+      $(".custom-goal").addClass("animated fadeInRight show");
+    });
+  
+    $('.goal-back').click(function(){
+      console.log("goal back button click");
+      $(".goals-questions").addClass("animated fadeInLeft show");
+      $(".custom-goal").removeClass("show").addClass("hide");
+    });
+});
+
+//****************** GOALS ***********************//
+$("#gender_next").click(function()
+{
+	$('#gender').hide();
+	$('#goals').show();
+
+	$('.demo-btn').hover(function() {
+        $(this).addClass("animated pulse");
+      }, function() {
+        $(this).removeClass("animated pulse");
+      });
+    
+      $('.demo-btn').click(function() {
+        if ($(this).find(".goal-img").hasClass("add-btn-checked") || $(this).hasClass("custom-btn")){
+          $(this).removeClass("btn-checked");
+          $(this).find(".goal-img").removeClass("add-btn-checked")
+        } else {
+          $(this).addClass("btn-checked");
+          $(this).find(".goal-img").addClass("add-btn-checked");
+        }
+      });
+    
+      $('.cc-loan-btn').click(function(){
+        console.log("loan or cc btn clicked");
+        $(".cc-loan-btn").addClass("demo-btn-checked");
+      });
+    
+      $('.custom-btn').click(function(){
+        console.log("custom button");
+        $(".goals-questions").removeClass("show").addClass("hide");
+        $(".custom-goal").addClass("animated fadeInRight show");
+      });
+    
+      $('.goal-back').click(function(){
+        console.log("goal back button click");
+        $(".goals-questions").addClass("animated fadeInLeft show");
+        $(".custom-goal").removeClass("show").addClass("hide");
+      });
 });
 
 
