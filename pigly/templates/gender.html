@@ -29,32 +29,57 @@
       <div class="questions">
                 
         <div class="gender-questions">
-          
-          <div class="gender-icon gender-female">
-            <a class="gender-female" href="#"></a>
+          <div>
+          <a class="gender-female" href="#"></a>
           </div>
-          
-          <div class="gender-icon gender-male">
-            <a href="#"><img class="gender-img" src="../static/img/male.png" height="200"></a>
-          </div>
-          
-          <br/>
-          
-          <a class="next-step" href="zipcode">Next Step</a>
-          
+          <div>
+          <a class="gender-male" href="#"></a>
         </div>
-        
-      </div>
+        <br>
+        </div>
+         
+      </div>    
     </div>
-  </div>
 
+  </div>
+  <div>
+    <br>
+    <a class="next-step" href="zipcode">Next Step &rarr;</a>
+  </div>
   
   <script>
     $(document).ready(function(){
         
-        $('.gender-icon').hover(function() {
-          $('.gender-icon').innerHTML("eh");
-        });
+        $('.gender-female').hover(
+          function() {
+            $(this).addClass("gender-female-overlay");
+          },
+          function() {
+            $(this).removeClass("gender-female-overlay");
+          }
+        );
+      
+        $('.gender-male').hover(
+          function() {
+            $(this).addClass("gender-male-overlay");
+          },
+          function() {
+            $(this).removeClass("gender-male-overlay");
+          }
+        );
+      
+        $('.gender-female').click(function() {
+            $(this).css("background-image", "url('../static/img/female.png')");
+            $('.gender-male').css("background-image", "url('../static/img/male-blue.png')");
+          }
+        );
+      
+        $('.gender-male').click(function() {
+            $(this).css("background-image", "url('../static/img/male.png')");
+            $('.gender-female').css("background-image", "url('../static/img/female-blue.png')");
+          }
+        );
+      
       
       
         $('.demo-btn').hover(function() {
@@ -92,10 +117,5 @@
             
     });
   </script>
-  
-  <script>
-  </script>
-    
-
 </body>
 </html>

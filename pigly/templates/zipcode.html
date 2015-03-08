@@ -6,7 +6,6 @@
 	
 	<title>Pigly</title>
 
-	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
 	
 	<!-- Bootstrap itself -->
 	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -22,11 +21,123 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 
-<body>
-	<div id="zipcode">
-		<p id="zip"> ZIP CODE</p>
-		<a id="zip_next" href='fin_overview'> We are all set! </a>
-	</div>
+<body class="zipcode-pg">
+
+<!--
+  <div id="btnbar">
+    <button class="navbutton" id="navbutton1">5</button>
+    <button class="navbutton" id="navbutton2">6</button>
+    <button class="navbutton" id="navbutton3">7</button>
+    <button class="navbutton" id="navbutton4">8</button>
+  </div>
+-->
+
+  <div class="demographics">
+    <div class="wrapper">
+      <h1>What is your zipcode?</h1>
+      
+      <div class="questions">
+                
+        <div class="zipcode-questions">
+          
+          <div class="zipcode-current-loc">
+            <div class="zipcode-flash">
+              <div class="zipcode-pointer">
+              </div>
+              <div class="zipcode-pulse">
+              </div>
+            </div>
+            
+            <div class="zipcode-mine">
+              <span>Use Current Location</span>
+            </div>
+          </div>
+                    
+          <span class="zipcode-or">&#8211; OR &#8211;</span>
+          
+          <br/><br/>
+          
+          <label class="zipcode-custom-label" for="zipcode-custom">Zipcode</label>
+          <input type="text" class="form-control" id="zipcode-custom">
+                    
+          <a class="next-step" href="fin_overview">Next Step &rarr;</a>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  
+  <script>
+    $(document).ready(function(){
+        
+        $('.gender-female').hover(
+          function() {
+            $(this).addClass("gender-female-overlay");
+          },
+          function() {
+            $(this).removeClass("gender-female-overlay");
+          }
+        );
+      
+        $('.gender-male').hover(
+          function() {
+            $(this).addClass("gender-male-overlay");
+          },
+          function() {
+            $(this).removeClass("gender-male-overlay");
+          }
+        );
+      
+        $('.gender-female').click(function() {
+            $(this).css("background-image", "url('img/female.png')");
+          }
+        );
+      
+        $('.gender-male').click(function() {
+            $(this).css("background-image", "url('img/male.png')");
+          }
+        );
+      
+      
+      
+        $('.demo-btn').hover(function() {
+          $(this).addClass("animated pulse");
+        }, function() {
+          $(this).removeClass("animated pulse");
+        });
+      
+        $('.demo-btn').click(function() {
+          if ($(this).find(".goal-img").hasClass("add-btn-checked") || $(this).hasClass("custom-btn")){
+            $(this).removeClass("btn-checked");
+            $(this).find(".goal-img").removeClass("add-btn-checked")
+          } else {
+            $(this).addClass("btn-checked");
+            $(this).find(".goal-img").addClass("add-btn-checked");
+          }
+        });
+      
+        $('.cc-loan-btn').click(function(){
+          console.log("loan or cc btn clicked");
+          $(".cc-loan-btn").addClass("demo-btn-checked");
+        });
+      
+        $('.custom-btn').click(function(){
+          console.log("custom button");
+          $(".goals-questions").removeClass("show").addClass("hide");
+          $(".custom-goal").addClass("animated fadeInRight show");
+        });
+      
+        $('.goal-back').click(function(){
+          console.log("goal back button click");
+          $(".goals-questions").addClass("animated fadeInLeft show");
+          $(".custom-goal").removeClass("show").addClass("hide");
+        });
+            
+    });
+  </script>
+ 
 </body>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
