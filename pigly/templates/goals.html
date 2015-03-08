@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<meta charset="utf-8" name="viewport" content="initial-scale=1.0, user-scalable=no">
+<head>
+
+  <link rel="stylesheet" href="static/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="static/css/style.css" />
+  <link rel="stylesheet" href="static/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="static/css/fonts.css">
+  <link rel="stylesheet" href="static/css/animate.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+<body class="goals-pg">
+
+<!--
+  <div id="btnbar">
+    <button class="navbutton" id="navbutton1">5</button>
+    <button class="navbutton" id="navbutton2">6</button>
+    <button class="navbutton" id="navbutton3">7</button>
+    <button class="navbutton" id="navbutton4">8</button>
+  </div>
+-->
+
+  <div class="demographics">
+    <div class="wrapper">
+      <h1>What are your goals?</h1>
+      
+      <div class="questions">
+                
+        <div class="goals-questions">
+          <span class="hint">( Select all that apply )</span>
+
+          <div class="goals-loan">
+            <button class="demo-btn cc-loan-btn btn btn-default" type="submit">
+              <div class="goal-img"></div>
+              <span>Loans</span>
+            </button>
+          </div>
+          
+          <div class="goals-cc">
+            <button class="demo-btn cc-loan-btn btn btn-default" type="submit">
+              <div class="goal-img"></div>
+              <span>Credit Cards</span>
+            </button>
+          </div>
+          
+          <div class="goals-custom">
+            <button class="demo-btn custom-btn btn btn-default" type="submit">
+              <div class="goal-img"></div>
+              <span>Custom Goal</span>
+            </button>
+          </div>
+          
+          <br/>
+          
+          <a class="next-step" href="challenges">Next Step</a>
+          
+        </div>
+        
+        <div class="custom-goal">
+          <h2>My Custom Goal</h2>
+          <div class="custom-goal-form">
+            <form role="form">
+              <label for="goal-name">I am saving for:</label>
+              <input type="text" class="form-control" id="goal-name" placeholder="Spring Break to Hawaii">
+              <br/>
+              <label for="goal-amt">My goal is to save:</label>
+              <input type="text" class="form-control" id="goal-amt" placeholder="$100.00">
+              <br/>
+              <center>
+              <button class="btn btn-lg text-center goal-submit" type="submit">Create Your Goal</button>
+              <br/>
+              <a href="#" class="goal-back">Previous Screen</a>
+              </center>
+            </form>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  
+  <script>
+    $(document).ready(function(){
+        $('.demo-btn').hover(function() {
+          $(this).addClass("animated pulse");
+        }, function() {
+          $(this).removeClass("animated pulse");
+        });
+      
+        $('.demo-btn').click(function() {
+          if ($(this).find(".goal-img").hasClass("add-btn-checked") || $(this).hasClass("custom-btn")){
+            $(this).removeClass("btn-checked");
+            $(this).find(".goal-img").removeClass("add-btn-checked")
+          } else {
+            $(this).addClass("btn-checked");
+            $(this).find(".goal-img").addClass("add-btn-checked");
+          }
+        });
+      
+        $('.cc-loan-btn').click(function(){
+          console.log("loan or cc btn clicked");
+          $(".cc-loan-btn").addClass("demo-btn-checked");
+        });
+      
+        $('.custom-btn').click(function(){
+          console.log("custom button");
+          $(".goals-questions").removeClass("show").addClass("hide");
+          $(".custom-goal").addClass("animated fadeInRight show");
+        });
+      
+        $('.goal-back').click(function(){
+          console.log("goal back button click");
+          $(".goals-questions").addClass("animated fadeInLeft show");
+          $(".custom-goal").removeClass("show").addClass("hide");
+        });
+      
+    });
+</script>
+  </script>
+
+</body>
+</html>
