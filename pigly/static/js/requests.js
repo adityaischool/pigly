@@ -38,12 +38,16 @@ jQuery(document).ready(function($) {
 			balance_str = separate_comma(balance.toString());			
 			total_balance += balance;
 			$('<div>\
-				<p> Checkings Account </p>\
-	        	<p> xxxx-xxxx-xxxx-'+accounts[i]["last-digits"]+'</p>\
-	        	<p> $'+balance_str+'</p>\
-	  		</div>').appendTo('#fin_overview_accounts');
+				<h2>Checking &amp; Savings</h2>\
+				<div class="acct-left">\
+	            <p><strong>Checking Account</strong><br/>\
+	            xxxx-xxxx-xxxx-'+accounts[i]['last-digits'] +'</p>\
+		          </div>\
+		          <div class="acct-right">$'+ balance_str + '</div><div class="clear" style="clear: both;"></div>\
+		          <div class="savings-total"><h3>Total Saved: $'+ balance_str + '</h3></div>'
+	        	).appendTo('#fin_overview_accounts');
 		}
-		document.getElementById('fin_overview_total_balance').textContent = "Total Balance: $" + separate_comma(total_balance.toString());
+		// document.getElementById('fin_overview_total_balance').textContent = "Total Balance: $" + separate_comma(total_balance.toString());
 	};
 	xhr.onerror = function(err) {
 	    // document.getElementById('accounts_list').textContent = "ugh an error. i can't handle this right now.";

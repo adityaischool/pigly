@@ -1,33 +1,71 @@
-<html>
+<!DOCTYPE html>
+<meta charset="utf-8" name="viewport" content="initial-scale=1.0, user-scalable=no">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	
-	<title>Pigly</title>
 
-	<!-- Bootstrap itself -->
-	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
-	<!-- Custom styles -->
-	<!-- <link rel="stylesheet" href="assets/css/magister.css"> -->
-	<link rel="stylesheet" href="static/css/style.css" />
-	<link rel="stylesheet" href="static/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="static/css/fonts.css">
-	<link rel="stylesheet" href="static/css/animate.css">
-	<!-- Fonts -->
-	<!-- <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/analytics.css"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 </head>
-
 <body>
-	<div id="analytics">
-		<p id="analytics_caption"> ANALYTICS </p>
-		<div id='categ_exps'> </div>
-		<a id="analytics_back" href='/challenges'> Go Back </a>
-	</div>
-</body>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="../static/js/analytics.js"></script>
-</html>
+	<div id='analyticstopheader'>ANALYTICS</div>
+
+	<div id='chartcarousel'>
+		
+		<div class='chart' id='chart1'>
+
+			<img src='../images/spendingpiechart.png'>
+
+		</div>
+
+		<div class='chart' id='chart2'>
+
+			<img src='../images/categorieschart.png'>
+
+		</div>
+
+		<div class='chart' id='chart3'>
+
+			<img src='../images/monthlysavingschart.png'>
+
+		</div>
+
+		<div class='chart' id='chart4'>
+
+			<img src='../images/donutchart.png'>
+
+		</div>
+
+	</div>
+
+
+	
+
+    <div class='btnbar'>
+        
+	    <button class='navbutton' id='navbutton1'>1</button>
+
+	    <button class='navbutton' id='navbutton2'>2</button>
+
+	    <button class='navbutton' id='navbutton3'>3</button>
+
+	    <button class='navbutton' id='navbutton4'>4</button>
+
+    </div>
+
+    <script>
+	$(document).ready(function(){
+	    
+	        $("#chartcarousel").scrollLeft(290);
+
+	 });
+	</script>
+
+    <script src="js/interaction.js"></script>
+
+</body>

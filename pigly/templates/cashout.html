@@ -2,11 +2,11 @@
 <meta charset="utf-8" name="viewport" content="initial-scale=1.0, user-scalable=no">
 <head>
 
-  <link rel="stylesheet" href="static/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="static/css/style.css" />
-  <link rel="stylesheet" href="static/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="static/css/fonts.css">
-  <link rel="stylesheet" href="static/css/animate.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/animate.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
@@ -15,57 +15,30 @@
 
   <div class="demographics">
     <div class="wrapper">
-      <h1>Your Financial Overview</h1>
+      <h1>The Impact Of Your Savings</h1>
       
-      <div class="financial-accts">
-        <div id="fin_overview_accounts" class="checking-savings">
-          <h2>Checking &amp; Savings</h2>
-
-          <div class="acct-left">
-            <p><strong>Checking Account</strong><br/>
-            xxxx-xxxx-xxxx-3291</p>
-          </div>
-          <div class="acct-right">
-            $100,000.00
-          </div>
-          
-          <div class="clear" style="clear: both;"></div>
-          
-          <div class="savings-total"><h3>Total Saved: $100,000.00</h3></div>
-          
-        </div>
-        
-        <div class="debts-loans">
-          <h2>Debts &amp; Loans</h2>
-
-          <div class="acct-left">
-            <p><strong>Student Loan</strong><br/>
-            xxxx-xxxx-xxxx-211</p>
-          </div>
-          <div class="acct-right">
-            $35,203.02
-          </div>
-          
-          <div class="clear" style="clear: both;"></div>
-
-          <div class="acct-left">
-            <p><strong>QuikSilver Credit Card</strong><br/>
-            xxxx-xxxx-xxxx-211</p>
-          </div>
-          <div class="acct-right">
-            $3,221.11
-          </div>
-          
-          <div class="clear" style="clear: both;"></div>
-          
-          <div class="balance-total"><h3>Total Saved: $100,000.00</h3></div>
-
-          
-        </div>
-        
+      <div class="challenge-img">
+        <img src="img/applysavings.png">
+        <h2>Beer Buster Saved You:<br/>
+        <span style="font-weight: normal; margin-top: 20px;">$230 This Month</span></h2>
       </div>
       
-      <a id="next-step-hack" class="next-step" href="goals">Let's set some challenges &rarr;</a>
+      <hr/>
+      
+      <div class="apply-equally">
+        <h3>Recommended Application of<br/>Your Challenge Savings</h3>
+        <br/>
+        <img class="text-center" src="img/equal-graph.png" width="250" style="text-align: center;">
+        <br/><br/>
+        <div class="divide-savings">
+          <button class="divide-btn btn btn-lg" type="submit">Apply Savings to Debt</button>
+        </div>
+      </div>
+      
+      <br/>
+  
+      
+<!--        <button class="divide-btn btn btn-lg" type="submit">Choose Debts to Apply To</button>-->
       
     </div>
   </div>
@@ -140,7 +113,8 @@
     });
   </script>
   
-  <script src="../static/js/requests.js"></script>
+  <script>
+  </script>
     
 
 </body>

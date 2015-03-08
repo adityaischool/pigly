@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<meta charset="utf-8" name="viewport" content="initial-scale=1.0, user-scalable=no">
+<head>
+
+
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/dashboard.css"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+	<div id='dashboardtopheader'>DASHBOARD</div>
+
+	<div id='mychallengesheader'>MY CHALLENGES</div>
+
+	<div id='challengecarousel'>
+		
+		<div class='activechallenge' id='challenge1'>
+
+			<div class='challengename'>Sans Sushi</div>
+
+			<div class='categoryicon'><img src='../images/foodiconmed.png'></div>
+
+			<div class='moneysaved'>$36 Saved!</div>
+
+			<div class='dayscompleted'>16</div>
+
+			<div class='daysremaining'>of 30 days<br>complete!</div>
+
+			<div class='woots'>5 Woots!</div>
+
+		</div>
+
+		<div class='activechallenge' id='challenge2'>
+
+			<div class='challengename'>Boba No!</div>
+
+			<div class='categoryicon'><img src='../images/sodaiconmed.png'></div>
+
+			<div class='moneysaved'>$27 Saved!</div>
+
+			<div class='dayscompleted'>21</div>
+
+			<div class='daysremaining'>of 30 days<br>complete!</div>
+
+			<div class='woots'>11 Woots!</div>
+
+		</div>
+
+		<div class='activechallenge' id='challenge3'>
+
+			<div class='challengename'>No Clothes March</div>
+
+			<div class='categoryicon'><img src='../images/shirticonmed.png'></div>
+
+			<div class='moneysaved'>$120 Saved!</div>
+
+			<div class='dayscompleted'>28</div>
+
+			<div class='daysremaining'>of 30 days<br>complete!</div>
+
+			<div class='woots'>13 Woots!</div>
+
+		</div>
+
+	</div>
+
+
+	<div id='totalsavings'>
+		
+		<div id='savingstext'>Total Savings:</div>
+
+		<div id='savingsamount'>$537</div>
+
+	</div>
+
+
+	<div id='debtreduction'>
+		
+		<div id='debttext'>Total Debt Reduction:</div>
+
+		<div id='debtamount'>$232</div>
+
+	</div>
+
+	
+
+    <div class='btnbar'>
+        
+	    <button class='navbutton' id='navbutton1'>1</button>
+
+	    <button class='navbutton' id='navbutton2'>2</button>
+
+	    <button class='navbutton' id='navbutton3'>3</button>
+
+	    <button class='navbutton' id='navbutton4'>4</button>
+
+    </div>
+
+    <script>
+	$(document).ready(function(){
+	    
+	        $("#challengecarousel").scrollLeft(195);
+
+	 });
+	</script>
+
+    <script src="js/interaction.js"></script>
+
+</body>

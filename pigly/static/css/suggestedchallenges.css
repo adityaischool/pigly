@@ -1,0 +1,127 @@
+/*CSS*/
+
+@font-face {
+	font-family: 'proximaNova';
+	src: url('../fonts/proximanova-thin-webfont-webfont.tff' format('truetype'));
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+body {
+
+	font-family: 'proximaNova', Helvetica, Sans-Serif;
+	margin: 0;
+	padding: 0;
+	background: #bdc3c7;
+	overflow-x: hidden;
+	overflow-y: hidden;
+
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+#challengeslist {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 518px;
+	width: 320px;
+	overflow-y: scroll;
+}
+
+#suggestedchallengestitle {
+
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	background: #068D9D;
+	text-align: center;
+	font-size: 16px;
+	color: #ecf0f1;
+	line-height: 50px;
+
+}
+
+
+#suggestedchallengestitletext {
+
+	margin-top: 20px;
+
+}
+
+.challengepanel {
+
+	position: relative;
+	width: 320px;
+	height: 370px;
+	font-size: 16px;
+	clear: both;
+	border-bottom: 1px solid #ccd0d1;
+	background: #ecf0f1;
+}
+
+.challengenumber, .challengetitle, .participantstats,
+.savingsopportunity, #useropportunitiestitle, #useropportunitiesamount {
+
+	text-align: center;
+	position: absolute;
+	width: 250px;
+	margin-left: -125px;
+	left: 50%;
+
+}
+
+.challengenumber {
+
+	margin-top: 20px;
+	font-size: 14px;
+
+}
+
+.challengetitle {
+
+	font-size: 20px;
+	font-weight: 500;
+
+}
+
+.categoryicon {
+
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	left: 50%;
+	margin-left: -50px;
+	background: #8CC63E;
+
+}
+
+.participantstats {
+
+	font-size: 13px;
+
+}
+
+.savingsopportunity {
+
+	margin-top: -25px;
+	width: 250px;
+	height: 75px;
+	background: #8CC63E;
+	color: white;
+	border-radius: 10px;
+	font-weight: 500;
+
+}
+
+#useropportunitiestitle, #useropportunitiesamount {
+
+	margin-top: 12px;
+
+}

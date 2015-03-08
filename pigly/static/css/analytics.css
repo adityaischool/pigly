@@ -1,0 +1,76 @@
+/*CSS*/
+
+@font-face {
+	font-family: 'proximaNova';
+	src: url('../fonts/proximanova-thin-webfont-webfont.tff' format('truetype'));
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+body {
+
+	font-family: 'proximaNova', Helvetica, Sans-Serif;
+	margin: 0;
+	padding: 0;
+	background: #ecf0f1;
+	overflow-y: hidden;
+
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+#analyticstopheader {
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	background: #068D9D;
+	text-align: center;
+	font-size: 14px;
+	color: #ecf0f1;
+	line-height: 40px;
+}
+
+#chartcarousel{
+	position: relative;
+    width: auto;
+    height: 300px;
+    top: 85px;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.chart {
+
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	background: #ecf0f1;
+	border-right: 1px solid #bdc3c7;
+
+}
+
+#chart1 {
+
+	left: 0;
+}
+
+#chart2 {
+
+	left: 300px;
+}
+
+#chart3 {
+
+	left: 600px;
+}
+
+#chart4 {
+
+	left: 900px;
+}

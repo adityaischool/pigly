@@ -34,11 +34,19 @@ def _goals():
 
 @app.route('/challenges', methods=['GET', 'POST'])
 def _challenges():
-	return render_template('challenges.html')
+	return render_template('suggestedchallenges.html')
 
 @app.route('/analytics', methods=['GET', 'POST'])
 def _analytics():
 	return render_template('analytics.html')
+
+@app.route('/complete', methods=['GET', 'POST'])
+def _complete():
+	return render_template('challengecomplete.html')
+
+@app.route('/cashout', methods=['GET', 'POST'])
+def _cashout():
+	return render_template('cashout.html')
 
 # #AJAX - analytics dashboard 
 # @app.route('/_getAnalytics', methods=['GET', 'POST'])
