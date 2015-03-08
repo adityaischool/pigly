@@ -611,7 +611,6 @@ label {
 
 .next-step, .next-step-complete {
   text-align: center;
-  position: absolute;
   bottom: 50px;
   color: #fff;
   text-decoration: none;
@@ -623,10 +622,12 @@ label {
 }
 
 .next-step {
+  position: absolute;
   font-size: 15px;
 }
 
 .next-step-complete {
+  position: relative;
   bottom: 75px;
   font-size: 18px;
   margin: 0 30px;
