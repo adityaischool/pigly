@@ -58,6 +58,11 @@ $('#visibilitypublic').on('click', function() {
 
 });
 
+$('#accept').on('click', function() {
+
+    $(location).attr('href', 'dashboard.html');
+
+});
 
 //DASHBOARD PAGE
 $('.activechallenge').on('click', function() {
