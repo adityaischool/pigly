@@ -5,12 +5,11 @@ from flask import url_for
 from pigly import app
 import urllib2
 import math
+import json
 
 @app.route('/', methods=['GET', 'POST'])
 def land():
-	return render_template("login.html")
-
-
+	return render_template("main.html")
 
 #AJAX - analytics dashboard 
 @app.route('/_getAnalytics', methods=['GET', 'POST'])
@@ -35,7 +34,8 @@ def _transactions(transaction_list):
 	for transactions in cat_list:
 		amount = 0
 		for trans in transactions:
-			if trans['transaction-time'][:7] == '2015-03' and trans['amount'] < 0:
+			period = trans['transaction-time'][:7]
+			if period == '2015-02' or period == '2015-03' and trans['amount'] < 0:
 				amount += trans['amount']
 		amount_list.append(-amount)
 	cat_spends = dict()
@@ -44,22 +44,25 @@ def _transactions(transaction_list):
 	return cat_spends
 
 def _accounts(account_list):
-	accounts = json.loads(ACTS)['accounts']
-	act_dict = dict()
+	# print account_list
+	accounts = json.loads(account_list)['accounts']
+	ac_list = list()
+	# for ac in accounts:
+	# 	ac_list.append({'last-digits':ac['last-digits'], 
+	# 					'balance': ac['balance'],
+	# 					'account-type': ac['account-type']})
+	# print ac_list
 	for ac in accounts:
-		if ac['active'] == True:
-			act_dict[ac['account-id']] = act_dict.get(ac['account-id'],dict())
-			l_ac = dict()
-			l_ac['name'] = ac['account-name']
-			l_ac['balance'] = ac['balance']
-			l_ac['type'] = ac['account-type']
-			act_dict[ac['account-id']] = l_ac
-	return act_dict
+		ac_list.append((ac['last-digits'],ac['balance']));
+	return ac_list
+
+@app.route('/_fin_overview', methods=['GET', 'POST'])
+def _fin_overview():
+	accounts = request.args.get('accounts',0,type=str)
+	# print "\n\n\n",accounts
+	# acts = json.dumps(_accounts(accounts))
+	return render_template('login.html', accounts=_accounts(accounts))
+	# return acts
 
 def _projected_transactions(proj_transaction_list):
 	print proj_transaction_list
-	
-
-
-
-
