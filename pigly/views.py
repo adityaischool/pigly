@@ -36,6 +36,10 @@ def _goals():
 def _challenges():
 	return render_template('challenges.html')
 
+@app.route('/analytics', methods=['GET', 'POST'])
+def _analytics():
+	return render_template('analytics.html')
+
 # #AJAX - analytics dashboard 
 # @app.route('/_getAnalytics', methods=['GET', 'POST'])
 # def _getAnalytics():
