@@ -6,7 +6,7 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
-	overflow-y: hidden;
+	overflow-y: scroll;
 }
 
 .goals-pg {
@@ -656,10 +656,12 @@ label {
 }
 
 
-
-
-
-
+.cashoutbody{
+  overflow-y:scroll !important;
+}
+::-webkit-scrollbar{
+  display: none;
+}
 
 /*** CHECKBOXES ***/
 /* https://github.com/flatlogic/awesome-bootstrap-checkbox */

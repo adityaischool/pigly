@@ -9,6 +9,10 @@ import json
 
 @app.route('/', methods=['GET', 'POST'])
 def land():
+	return render_template("landing.html")
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
 	return render_template("login.html")
 
 @app.route('/age', methods=['GET', 'POST'])

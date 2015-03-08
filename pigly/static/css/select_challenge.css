@@ -6,10 +6,12 @@ body {
 	padding: 0;
 	background: #FFFFFF;
 	overflow-x: hidden;
-	overflow-y: hidden;
+	overflow-y: scroll;
 }
 
-
+::-webkit-scrollbar{
+	display: none;
+}
 
 .btnbar {
 	z-index: 9999999999;
