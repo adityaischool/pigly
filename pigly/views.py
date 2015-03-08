@@ -25,7 +25,6 @@ def _getAnalytics():
 	return Response(json.dumps(val),mimetype='application/json')
 
 
-@app.route('/_categories', methods=['GET', 'POST'])
 def _transactions(transaction_list):
 	transactions = json.loads(transaction_list)['transactions']
 	cat_len = int(math.floor(len(transactions)*0.25))
@@ -43,6 +42,22 @@ def _transactions(transaction_list):
 	for i in range(len(catname_list)):
 		cat_spends[catname_list[i]] = cat_spends.get(catname_list[i],0) + amount_list[i]
 	return cat_spends
+
+def _accounts(account_list):
+	accounts = json.loads(ACTS)['accounts']
+	act_dict = dict()
+	for ac in accounts:
+		if ac['active'] == True:
+			act_dict[ac['account-id']] = act_dict.get(ac['account-id'],dict())
+			l_ac = dict()
+			l_ac['name'] = ac['account-name']
+			l_ac['balance'] = ac['balance']
+			l_ac['type'] = ac['account-type']
+			act_dict[ac['account-id']] = l_ac
+	return act_dict
+
+def _projected_transactions(proj_transaction_list):
+	print proj_transaction_list
 	
 
 
