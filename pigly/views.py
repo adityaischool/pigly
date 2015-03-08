@@ -36,6 +36,10 @@ def _goals():
 def _challenges():
 	return render_template('suggestedchallenges.html')
 
+@app.route('/beerbuster', methods=['GET', 'POST'])
+def _select_challenge():
+	return render_template('select_challenge.html')
+
 @app.route('/analytics', methods=['GET', 'POST'])
 def _analytics():
 	return render_template('analytics.html')
