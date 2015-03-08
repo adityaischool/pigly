@@ -51,44 +51,58 @@ label {
 }
 
 /*** NAV BAR ***/
-#btnbar {
-	z-index: 9999999999;
-	background: #ecf0f1;
-	position: fixed;
-	height: 50px;
-	width: 100%;
-	top: 100%;
-	left: 0;
-	margin-top: -50px;
+::-webkit-scrollbar { 
+   display: none; 
 }
 
+.btnbar {
+    z-index: 9999999999;
+    background: #ecf0f1 ;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    margin-top: -50px;
+}
+
+
 .navbutton {
-	position: absolute;
-	height: 100%;
-	width: 25%;
-	top: 0;
-	font-size: 24px;
-	color: #d35400;
-	background: none;
-	border: none;
+    position: absolute;
+    height: 100%;
+    width: 25%;
+    top: 0;
+    font-size: 24px;
+    color: #d35400 ;
+    background: none;
+    border: none;
 }
 
 #navbutton1 {
-	left: 0;
+
+    left: 0;
+
 }
 
 #navbutton2 {
-	left: 25%;
+
+    left: 25%;
+
 }
 
 #navbutton3 {
-	left: 50%;
+
+    left: 50%;
+
 }
 
 
 #navbutton4 {
-	left: 75%;
+
+    left: 75%;
+
 }
+
 
 /*** DEMOGRAPHIC ***/
 

@@ -70,19 +70,25 @@ body {
 
 }
 
-#challenge1 {
+#challenge0 {
 
 	left: 0;
+
 }
 
-#challenge2 {
+#challenge1 {
 
 	left: 235px;
 }
 
-#challenge3 {
+#challenge2 {
 
 	left: 470px;
+}
+
+#challenge3 {
+
+	left: 705px;
 }
 
 .challengename {
@@ -139,6 +145,17 @@ body {
 	left: 105px;
 	font-size: 16px;
 	top: 200px;
+
+}
+
+.daysremaining0 {
+
+	position: absolute;
+	width: 125px;
+	left: 80px;
+	font-size: 16px;
+	top: 200px;
+	margin-left: 0px;
 
 }
 

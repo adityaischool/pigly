@@ -32,19 +32,27 @@ def _fin_overview():
 def _goals():
 	return render_template('goals.html')
 
-@app.route('/challenges', methods=['GET', 'POST'])
+@app.route('/suggestedchallenges.html', methods=['GET', 'POST'])
 def _challenges():
 	return render_template('suggestedchallenges.html')
 
-@app.route('/beerbuster', methods=['GET', 'POST'])
+@app.route('/selectexistingchallenge.html', methods=['GET', 'POST'])
 def _select_challenge():
 	return render_template('select_challenge.html')
 
-@app.route('/analytics', methods=['GET', 'POST'])
+@app.route('/dashboard.html', methods=['GET', 'POST'])
+def _dashboard():
+	return render_template('dashboard.html')
+
+@app.route('/friendsupdates.html', methods=['GET', 'POST'])
+def _fu():
+	return render_template('friendsupdates.html')
+
+@app.route('/analytics.html', methods=['GET', 'POST'])
 def _analytics():
 	return render_template('analytics.html')
 
-@app.route('/complete', methods=['GET', 'POST'])
+@app.route('/challengecomplete.html', methods=['GET', 'POST'])
 def _complete():
 	return render_template('challengecomplete.html')
 

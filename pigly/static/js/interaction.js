@@ -62,6 +62,30 @@ $('#visibilitypublic').on('click', function() {
 //DASHBOARD PAGE
 $('.activechallenge').on('click', function() {
 
-	$(location).attr('href', 'createnewchallenge.html');
+	$(location).attr('href', 'challengecomplete.html');
+
+});
+
+$('#navbutton1').on('click', function() {
+
+    $(location).attr('href', 'dashboard.html');
+
+});
+
+$('#navbutton2').on('click', function() {
+
+    $(location).attr('href', 'analytics.html');
+
+});
+
+$('#navbutton3').on('click', function() {
+
+    $(location).attr('href', 'friendsupdates.html');
+
+});
+
+$('#navbutton4').on('click', function() {
+
+    $(location).attr('href', 'suggestedchallenges.html');
 
 });
